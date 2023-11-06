@@ -208,7 +208,7 @@ public class FastFoodView {
                         System.out.print(ColorConfig.RED + "Không được để trống." + "\n" + ColorConfig.RESET);
                         check = false;
                     } else if (newFoodName.length() < 5 || newFoodName.length() > 40) {
-                        System.out.print(ColorConfig.RED + "Tên học sinh không được dưới 5 ký tự.\n" + ColorConfig.RESET);
+                        System.out.print(ColorConfig.RED + "Tên không được dưới 5 ký tự.\n" + ColorConfig.RESET);
                         check = false;
                     } else if (!newFoodName.matches("^[a-zA-Z\\p{L}\\s‘’]+$")) {
                         System.out.print(ColorConfig.RED + "Không được nhập số.\n" + ColorConfig.RESET);

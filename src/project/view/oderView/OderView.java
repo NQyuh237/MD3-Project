@@ -51,7 +51,7 @@ public class OderView {
                     new ProfileMenu();
                     break;
                 default:
-                    System.out.println("Nhập từ 1 -------> 2 thôi quỳ !!!");
+                    System.out.println("Nhập từ 1 -------> 2 thôi nhé !!!");
             }
         }
     }

@@ -32,7 +32,7 @@ public class UserView {
     // danh sách user ok
     public void showListUser() {
         System.out.println(" ☺.---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------.☺");
-        System.out.println(" |  ID  |          Tên Người dùng           |        Tên Đăng Nhập         |              Email             |        Mật khẩu        |          Số Điện Thoại           |      Trạng thái       |      Dạng Tài Khoản      |");
+        System.out.println(" |  ID  |          Tên Người Dùng           |        Tên Đăng Nhập         |              Email             |        Mật khẩu        |          Số Điện Thoại           |      Trạng thái       |      Dạng Tài Khoản      |");
         System.out.println(" '-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------'");
         for (int i = 0; i < userList.size(); i++) {
             System.out.printf(" |  %-4s|    %-30s |    %-25s |    %-25s   |    %-16s    |     %-18s           |         %-10s    |   %-17s      |\n", userList.get(i).getId(), userList.get(i).getName(), userList.get(i).getUserName(), userList.get(i).getEmail(), userList.get(i).getPassword(), userList.get(i).getPhoneNumber(), userList.get(i).isStatus() ? "Mở" : "Khóa", userList.get(i).getRoles());
@@ -46,7 +46,7 @@ public class UserView {
         Set<Role> roleSet = user.getRoles();
         List<Role> roles = new ArrayList<>(roleSet);
         System.out.println(" ☺.---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------.☺");
-        System.out.println(" |  ID  |          Tên Người dùng           |        Tên Đăng Nhập         |              Email             |        Mật khẩu        |          Số Điện Thoại           |      Trạng thái       |      Dạng Tài Khoản      |");
+        System.out.println(" |  ID  |          Tên Người Dùng           |        Tên Đăng Nhập         |              Email             |        Mật khẩu        |          Số Điện Thoại           |      Trạng thái       |      Dạng Tài Khoản      |");
         System.out.println(" '-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------'");
         for (int i = 0; i < userList.size(); i++) {
             System.out.printf(" |  %-4s|    %-30s |    %-25s |    %-25s   |    %-16s    |     %-18s           |         %-10s    |   %-17s      |\n", userList.get(i).getId(), userList.get(i).getName(), userList.get(i).getUserName(), userList.get(i).getEmail(), userList.get(i).getPassword(), userList.get(i).getPhoneNumber(), userList.get(i).isStatus() ? "Mở" : "Khóa", userList.get(i).getRoles());
@@ -62,7 +62,7 @@ public class UserView {
                 System.out.println(ColorConfig.GREEN + "|                                                      |" + "\n" +
                         "'------------------------------------------------------'" + ColorConfig.RESET);
                 if (targetId < 1) {
-                    System.out.println("        Xin đấy nhập đúng theo " + ColorConfig.RED + "id" + ColorConfig.RESET + " hộ mình cái !!! ");
+                    System.out.println("        Xin hãy nhập đúng theo " + ColorConfig.RED + "id" + ColorConfig.RESET + " hộ mình cái !!! ");
                 }
             } while (targetId < 1);
             userController.detailUser(targetId);
@@ -244,7 +244,7 @@ public class UserView {
                 System.out.print(ColorConfig.RED + "Không được để trống." + "\n" + ColorConfig.RESET);
                 checkName = false;
             } else if (name.length() < 5 || name.length() > 40) {
-                System.out.print(ColorConfig.RED + "Tên học sinh không được dưới 5 ký tự.\n" + ColorConfig.RESET);
+                System.out.print(ColorConfig.RED + "Tên không được dưới 5 ký tự.\n" + ColorConfig.RESET);
                 checkName = false;
             } else if (!name.matches("^[a-zA-Z\\p{L}\\s‘’]+$")) {
                 System.out.print(ColorConfig.RED + "Không được nhập số.\n" + ColorConfig.RESET);
@@ -875,7 +875,7 @@ public class UserView {
             if (!oder.get(i).isStatus()) {
                 for (int j = 0; j < oderList.size(); j++) {
                     if (oderList.get(j).getUser().getId() == oder.get(i).getUser().getId() && oderList.get(j).isStatus() == oder.get(i).isStatus() && oderList.get(j).getListOderUser().size() == oder.get(i).getListOderUser().size()) {
-                        System.out.println("trùng ");
+                        System.out.println("OK");
                         new ProfileMenu();
                     }
                 }

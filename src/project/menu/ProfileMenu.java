@@ -24,7 +24,7 @@ public class ProfileMenu {
             List<Role> roles = new ArrayList<>(roleSet);
             if (roles.get(0).getName() == RoleName.ADMIN) {
                 System.out.println("                                                .---------------------------------------------------------." + "\n" +
-                        "                                                |                    " + ColorConfig.RED + " Admin Manager " + ColorConfig.RESET + "                       |" + "\n" +
+                        "                                                |                    " + ColorConfig.RED + " CUA Manager " + ColorConfig.RESET + "                       |" + "\n" +
                         "                                                |---------------------------------------------------------|" + "\n" +
                         "                                                |                 1. Quản lý các loại.                    |" + "\n" +
                         "                                                |                 2. Quản lý thức ăn nhanh.                    |" + "\n" +
@@ -71,7 +71,7 @@ public class ProfileMenu {
 
             } else if (roles.get(0).getName() == RoleName.PM) {
                 System.out.println("                                                .---------------------------------------------------------." + "\n" +
-                        "                                                |                    " + ColorConfig.RED + " Huy Manager " + ColorConfig.RESET + "                          |" + "\n" +
+                        "                                                |                    " + ColorConfig.RED + " CUA Manager " + ColorConfig.RESET + "                          |" + "\n" +
                         "                                                |---------------------------------------------------------|" + "\n" +
                         "                                                |                 1. Đổi mật khẩu.                        |" + "\n" +
                         "                                                |                 2. Quản lý các loại.                    |" + "\n" +

@@ -5,7 +5,7 @@ import project.model.oderList.Oder;
 
 import java.util.*;
 
-public class Dai {
+public class test {
     static OderController oderController = new OderController();
     static List<Oder> oderList = oderController.showListOder();
     static FastFoodController fastFoodController = new FastFoodController();

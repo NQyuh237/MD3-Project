@@ -29,9 +29,8 @@ public class NavBar {
                             "                                              ║                  2. Đăng Nhập.                                 ║\n" +
                             "                                              ║                  3. Danh sách sản phẩm.                        ║\n" +
                             "                                              ║                  4. Tìm kiếm sản phẩm.                         ║\n" +
-                            "                                              ║                  5. Top 10 đồ ăn bán chạy nhất.                ║\n" +
-                            "                                              ║                  6. Top 10 sản phẩm có like nhiều nhất.        ║\n" +
-                            "                                              ║                  7. " + ColorConfig.RED + "Thoát chương trình" + ColorConfig.RESET + ".                        ║\n" +
+                            "                                              ║                  5. Top 10 sản phẩm có like nhiều nhất.        ║\n" +
+                            "                                              ║                  6. " + ColorConfig.RED + "Thoát chương trình" + ColorConfig.RESET + ".                        ║\n" +
                             "                                              '————————————————————————————————————————————————————————————————'\n")
             ;
             int choose;
@@ -46,7 +45,7 @@ public class NavBar {
                     if (choose > 7) {
                         System.out.println("          Nhập quá " + ColorConfig.RED + "6 " + ColorConfig.RESET + "rồi bạn ơi !!!\uD83E\uDD10\uD83E\uDD10\uD83E\uDD10");
                     }
-                } while (choose > 7);
+                } while (choose > 6);
                 switch (choose) {
                     case 1:
                         new UserView().formRegister();
@@ -58,15 +57,12 @@ public class NavBar {
                         new FastFoodView().showTableFastFood();
                         break;
                     case 4:
-                        new FastFoodView().searchFastFood();  // bơ sờ phếch
+                        new FastFoodView().searchFastFood();  // ok
                         break;
                     case 5:
-                        // chưa làm
+                        new FastFoodView().topLike();  // ok
                         break;
                     case 6:
-                        new FastFoodView().topLike();  // bơ sờ phếch
-                        break;
-                    case 7:
                         System.out.println(ColorConfig.BLUE + "                                    \uD83D\uDC93\uD83D\uDC93\uD83D\uDC93Cảm ơn đã sử dụng dịch vụ của chúng tôi chúc bạn có một ngày mới vui vẻ!!! \uD83D\uDC93\uD83D\uDC93\uD83D\uDC93" + ColorConfig.RESET);
                         System.exit(0);
                     default:
